@@ -1,1 +1,3 @@
-# Project 10 -> Cub3D
+# 42Paris Project 10 -> Cub3D
+
+##**Functions Allowed**
