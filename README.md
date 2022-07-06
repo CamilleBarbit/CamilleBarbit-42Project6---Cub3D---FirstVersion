@@ -2,7 +2,6 @@
 
 ## *Functions Allowed*
 
-#### 
   -open()
   -close()
   -read()
