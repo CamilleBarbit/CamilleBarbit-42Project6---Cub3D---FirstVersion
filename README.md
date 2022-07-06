@@ -2,5 +2,16 @@
 
 ## *Functions Allowed*
 
-#### -open
--
+#### 
+  -open()
+  -close()
+  -read()
+  -write()
+  -printf()
+  -malloc()
+  -free()
+  -perror()
+  -sterror
+  -exit()
+
+  
