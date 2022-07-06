@@ -2,6 +2,7 @@
 
 ## *Functions Allowed*
 
+<p>
   -open()
   -close()
   -read()
@@ -12,5 +13,5 @@
   -perror()
   -sterror
   -exit()
-
+</p>
   
