@@ -6,7 +6,7 @@
 /*   By: camillebarbit <camillebarbit@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/13 19:23:13 by camillebarb       #+#    #+#             */
-/*   Updated: 2022/07/14 16:47:47 by camillebarb      ###   ########.fr       */
+/*   Updated: 2022/07/14 19:15:29 by camillebarb      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,21 +23,12 @@
 # include <stdlib.h>
 # include <string.h>
 # include <errno.h>
-
-
-/* Structures */
-
-typedef struct s_parsing
-{
-	int	index;
-
-}	t_parsing;
-
+# include "libft/libft.h"
 
 /* Errors */
 void	ft_error(const char *str);
 
 /* Parsing */
-int		check_validity_argv1(const char *str, t_parsing *check);
+int		check_validity_argv1(const char *str);
 
 #endif
