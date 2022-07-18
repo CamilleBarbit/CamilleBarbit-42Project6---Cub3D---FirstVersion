@@ -6,16 +6,18 @@
 /*   By: camillebarbit <camillebarbit@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/29 15:19:44 by cbarbit           #+#    #+#             */
-/*   Updated: 2022/07/14 19:21:29 by camillebarb      ###   ########.fr       */
+/*   Updated: 2022/07/18 13:50:02 by camillebarb      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
+
 # include <unistd.h>
 # include <string.h>
 # include <stdlib.h>
 # include <ctype.h>
+# include "get_next_line/get_next_line.h"
 
 typedef struct s_list
 {

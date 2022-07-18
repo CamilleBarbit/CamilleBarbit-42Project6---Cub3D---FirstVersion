@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: cbarbit <cbarbit@student.42.fr>            +#+  +:+       +#+         #
+#    By: camillebarbit <camillebarbit@student.42    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/11/29 15:53:27 by cbarbit           #+#    #+#              #
-#    Updated: 2021/12/01 13:17:21 by cbarbit          ###   ########.fr        #
+#    Updated: 2022/07/18 13:58:45 by camillebarb      ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -49,7 +49,9 @@ SRCS =	ft_atoi \
 		ft_substr \
 		ft_tolower \
 		ft_toupper \
-
+		get_next_line/get_next_line_utils \
+		get_next_line/get_next_line
+ 
 C_SRCSFILES = $(addsuffix .c, $(SRCS))
 O_SRCSFILES = $(addsuffix .o, $(SRCS))
 
