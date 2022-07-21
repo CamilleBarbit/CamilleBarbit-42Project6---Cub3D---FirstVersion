@@ -6,7 +6,7 @@
 /*   By: camillebarbit <camillebarbit@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/13 19:23:10 by camillebarb       #+#    #+#             */
-/*   Updated: 2022/07/20 16:43:24 by camillebarb      ###   ########.fr       */
+/*   Updated: 2022/07/21 13:16:15 by camillebarb      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,7 @@ static int	parsing_argv1(int argc, const char *str, t_info *parsing)
 	ft_extract_infos(parsing, str);
 	if (check_space_and_place(parsing) == 1)
 	 	return (EXIT_FAILURE);
-	 if (check_texture_and_color(parsing) == 1)
+	if (check_texture_and_color(parsing) == 1)
 	  	return (EXIT_FAILURE);		
 	return (EXIT_SUCCESS);
 }

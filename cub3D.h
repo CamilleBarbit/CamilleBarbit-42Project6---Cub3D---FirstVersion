@@ -6,7 +6,7 @@
 /*   By: camillebarbit <camillebarbit@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/13 19:23:13 by camillebarb       #+#    #+#             */
-/*   Updated: 2022/07/21 10:37:50 by camillebarb      ###   ########.fr       */
+/*   Updated: 2022/07/21 13:40:36 by camillebarb      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,8 +50,9 @@ int		check_space_and_place(t_info *parsing);
 void	ft_extract_infos(t_info *parsing, const char *str);
 void	print_tab(t_info *parsing);
 void	print_tab_bis(t_info *parsing);
+void	complete_identifiers(t_info *parsing, int i);
 int		line_is_empty(const char *str);
 int		check_texture_and_color(t_info *parsing);
-int		str_compare(char const *s1, char *s2);
+int		str_compare(const char *s1, const char *s2);
 
 #endif

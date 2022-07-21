@@ -6,7 +6,7 @@
 /*   By: camillebarbit <camillebarbit@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/15 17:05:08 by camillebarb       #+#    #+#             */
-/*   Updated: 2022/07/19 21:18:21 by camillebarb      ###   ########.fr       */
+/*   Updated: 2022/07/21 13:47:34 by camillebarb      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ static int	map_beginning(const char *str)
 	int	i;
 
 	i = 0;
-	if (line_is_empty(str) == 1)
+	if (line_is_empty(str))
 		return (2);
 	while (str[i] && str[i] != '\n')
 	{
@@ -129,9 +129,9 @@ int	check_space_and_place(t_info *parsing)
 			}
 			if (map_beginning(parsing->file_infos[i]) == 2)
 			{			
-				if (line_is_empty(parsing->file_infos[i]) == 1)
+				if (line_is_empty(parsing->file_infos[i]))
 				{
-					while (line_is_empty(parsing->file_infos[i]) == 1)
+					while (line_is_empty(parsing->file_infos[i]))
 					{
 						i++;
 						if (i == (parsing->size - 1))

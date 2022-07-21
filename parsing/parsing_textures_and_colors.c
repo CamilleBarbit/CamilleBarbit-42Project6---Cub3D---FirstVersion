@@ -6,7 +6,7 @@
 /*   By: camillebarbit <camillebarbit@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/19 18:21:46 by camillebarb       #+#    #+#             */
-/*   Updated: 2022/07/21 10:36:11 by camillebarb      ###   ########.fr       */
+/*   Updated: 2022/07/21 13:59:22 by camillebarb      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -85,12 +85,12 @@ static int	compare_lines_and_identifiers(t_info *parsing)
 	{
 		if (str_compare(parsing->identifiers[i], parsing->line) == 0)
 		{
-			parsing->tab[1] = 1;
+			parsing->tab[i] = 1;
 			return (EXIT_SUCCESS);
 		}
 		i++;
 	}
-	ft_error("Invalid texture or color description: Something is wrong with the syntax!\n");
+	ft_error("Invalid texture or color description: Something is wrong with the syntax or just missing!\n");
 	return (EXIT_FAILURE);	
 }
 
@@ -114,14 +114,26 @@ int	check_texture_and_color(t_info *parsing)
 		return (EXIT_FAILURE);
 	while (nb_lines > 0)
 	{
-		if (line_is_empty(parsing->file_infos[i]) == 0)
+		if (!line_is_empty(parsing->file_infos[i]))
 		{
 			nb_lines--;
 			if (get_line_description(parsing, parsing->file_infos[i]) == 1)
 				return (EXIT_FAILURE);
 			if (compare_lines_and_identifiers(parsing) == 1)
-				return (EXIT_FAILURE);
+				break;
+			free(parsing->line);
 		}
+		i++;
+	}
+	i = 0;
+	while (i < 6)
+	{
+		if (parsing->tab[i] == 0)
+		{
+			printf("There is something missing in the description : %s", parsing->identifiers[i]);
+			return (EXIT_FAILURE);	
+		}
+		
 		i++;
 	}
 	return (EXIT_SUCCESS);

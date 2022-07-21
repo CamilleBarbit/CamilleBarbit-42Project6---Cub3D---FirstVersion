@@ -6,7 +6,7 @@
 /*   By: camillebarbit <camillebarbit@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/18 15:36:11 by camillebarb       #+#    #+#             */
-/*   Updated: 2022/07/21 10:37:05 by camillebarb      ###   ########.fr       */
+/*   Updated: 2022/07/21 13:44:35 by camillebarb      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,7 +50,7 @@ int	line_is_empty(const char *str)
 	return (1); //line is an empty line
 }
 
-static void	complete_identifiers(t_info *parsing, int i)
+ void	complete_identifiers(t_info *parsing, int i)
 {
 	if (i == 0)
 		parsing->identifiers[i] = ft_strdup("NO");
@@ -66,7 +66,7 @@ static void	complete_identifiers(t_info *parsing, int i)
 		parsing->identifiers[i] = ft_strdup("C");
 }
 
-int	str_compare(char *s1, char *s2)
+int	str_compare(const char *s1, const char *s2)
 {
 	int	i;
 
