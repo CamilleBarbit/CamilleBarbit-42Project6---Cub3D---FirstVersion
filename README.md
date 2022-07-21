@@ -1,14 +1,14 @@
 
-<h1>42Paris Project 10 -> Cub3D</h1>
+<h1><strong>42Paris Project 10 -> Cub3D</strong></h1>
 
-<h2>*Ressources*</h2>
+<h2><strong>Ressources</strong></h2>
 
-  [1] (https://harm-smits.github.io/42docs/projects/cub3d)
-  [2] (https://guy-grave.developpez.com/tutoriels/jeux/doom-wolfenstein-raycasting/)
+  <p>Ray casting for dummies: <a"https://guy-grave.developpez.com/tutoriels/jeux/doom-wolfenstein-raycasting/">link</a>.
+  </p>
 
 
-## *Functions Allowed*
-
+<h2><strong>Functions Allowed</strong></h2>
+<p>
   - open()
   - close()
   - read()
@@ -18,10 +18,10 @@
   - free()
   - perror()
   - sterror
-  - exit()
+  - exit()</p>
   
-## *Libraries*
-
+<h2><strong>Libraries</strong></h2>
+<p>
   - #include <unistd.h>
   - #include <sys/types.h>
   - #include <sys/stat.h>
@@ -30,3 +30,4 @@
   - #include <stdlib.h>
   - #include <string.h>
   - #include <errno.h>
+  - #include <stdbool.h></p>
