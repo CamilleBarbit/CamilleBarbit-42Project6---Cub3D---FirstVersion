@@ -6,12 +6,11 @@
 /*   By: camillebarbit <camillebarbit@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/18 15:36:11 by camillebarb       #+#    #+#             */
-/*   Updated: 2022/07/20 17:23:14 by camillebarb      ###   ########.fr       */
+/*   Updated: 2022/07/21 10:37:05 by camillebarb      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "cub3D.h"
-
 
 void	print_tab(t_info *parsing)
 {
@@ -67,43 +66,20 @@ static void	complete_identifiers(t_info *parsing, int i)
 		parsing->identifiers[i] = ft_strdup("C");
 }
 
-int	init_infos_textures_colors(t_info *parsing)
-{
-	int	i;
-
-	parsing->identifiers = malloc(sizeof(char *) * (6 + 1));
-	if (!parsing->identifiers)
-		return (EXIT_FAILURE);
-	i = 0;
-	while (i < 6)
-	{
-		complete_identifiers(parsing, i);
-		i++;
-	}
-	//print_tab_bis(parsing);
-	return (EXIT_SUCCESS);
-}
-
-
 int	str_compare(char *s1, char *s2)
 {
 	int	i;
 
 	i = 0;
-	if (ft_strlen(s1) != ft_strlen(s2))
-	{
-		ft_error("Invalid texture or color description: Something is wrong with the syntax!\n");
-		return (EXIT_FAILURE);		
-	}
-	while (s1[0] && s2[0] && s1[i] == s2[i])
+	// if (ft_strlen(s1) != ft_strlen(s2))
+	// {
+	// 	ft_error("Invalid texture or color description: Something is wrong with the syntax!\n");
+	// 	return (EXIT_FAILURE);		
+	// }
+	while (s1[i] && s2[i] && s1[i] == s2[i])
 		i++;
 	return (s1[i] - s2[i]);
 }
-	
 
-
-
-	while (s1[i] && s2bis[i] && s1bis[i] == s2bis[i] && i < n - 1)
-		i++;
-	return (s1bis[i] - s2bis[i]);
-}
+//s1 et S2 n'ont pas la même taille
+//s1 et S2 ont la même taille mais ne sont pas les même choses

@@ -6,7 +6,7 @@
 /*   By: camillebarbit <camillebarbit@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/13 19:23:13 by camillebarb       #+#    #+#             */
-/*   Updated: 2022/07/20 17:20:25 by camillebarb      ###   ########.fr       */
+/*   Updated: 2022/07/21 10:37:50 by camillebarb      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,7 @@ typedef struct	s_info
 	int			size; //size of the file, empty lines included
 	bool    	tab[6]; 
 	const char	**identifiers; //containing the different combinations of textures
-	char	*line;
+	char		*line;
 }	t_info;
 
 /* Errors */
@@ -50,7 +50,6 @@ int		check_space_and_place(t_info *parsing);
 void	ft_extract_infos(t_info *parsing, const char *str);
 void	print_tab(t_info *parsing);
 void	print_tab_bis(t_info *parsing);
-int		init_infos_textures_colors(t_info *parsing);
 int		line_is_empty(const char *str);
 int		check_texture_and_color(t_info *parsing);
 int		str_compare(char const *s1, char *s2);
