@@ -1,8 +1,3 @@
-<style>
-  h2 {
-    color : blue;
-  }
-</style>
 
 <h1><strong>42Paris Project 10 -> Cub3D</strong></h1>
 
@@ -27,15 +22,3 @@
   <li>exit()</li>
   </ul>
   
-<h2><strong>Libraries</strong></h2>
-<ul>
-  <li>#include unistd.h</li>
-  <li>#include sys/types.h</li>
-  <li>#include sys/stat.h</li>
-  <li>#include fcntl.h</li>
-  <li>#include stdio.h</li>
-  <li>#include stdlib.h</li>
-  <li>#include string.h</li>
-  <li>#include errno.h</li>
-  <li>#include stdbool.h</li>
-</ul>
