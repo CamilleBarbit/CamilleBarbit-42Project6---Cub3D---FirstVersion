@@ -6,7 +6,7 @@
 /*   By: camillebarbit <camillebarbit@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/15 17:05:08 by camillebarb       #+#    #+#             */
-/*   Updated: 2022/07/21 13:47:34 by camillebarb      ###   ########.fr       */
+/*   Updated: 2022/07/21 14:04:59 by camillebarb      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -148,11 +148,11 @@ int	check_space_and_place(t_info *parsing)
 						return (EXIT_FAILURE);
 					}		
 				}
-				else
-				{
-					ft_error("Invalid map: Something is wrong with the syntax!\n");					
-					break;					
-				}			
+				// else
+				// {
+				// 	ft_error("Invalid map: Something is wrong with the syntax!\n");					
+				// 	break;					
+				// }			
 			}
 		}
 		i++;
