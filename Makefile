@@ -6,7 +6,7 @@
 #    By: camillebarbit <camillebarbit@student.42    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/07/13 19:23:44 by camillebarb       #+#    #+#              #
-#    Updated: 2022/07/14 19:26:38 by camillebarb      ###   ########.fr        #
+#    Updated: 2022/07/20 16:44:18 by camillebarb      ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,12 +16,15 @@ cc = gcc
 
 RM = rm -rf
 
-CFLAGS = -Wall -Wextra -Werror
+CFLAGS = -g -Wall -Wextra -Werror
 
 C_FILES = cub3D.c \
 			errors_and_exit/error.c \
 			errors_and_exit/exit.c \
-			parsing/validity_argv1.c
+			parsing/validity_argv1.c \
+			parsing/first_extract.c \
+			parsing/parsing_textures_and_colors.c \
+			utils.c
 
 
 O_FILES = ${C_FILES:.c=.o}
@@ -33,7 +36,7 @@ all: ${NAME}
 
 ${NAME} : ${O_FILES}
 	@${MAKE} -C libft
-	@${CC} ${O_FILES} libft/libft.a -g3 -fsanitize=address -o ${NAME} 
+	@${CC} ${O_FILES} libft/libft.a -o ${NAME} 
 
 
 clean: 

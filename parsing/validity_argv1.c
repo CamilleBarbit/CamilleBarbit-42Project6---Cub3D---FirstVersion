@@ -6,7 +6,7 @@
 /*   By: camillebarbit <camillebarbit@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/14 13:11:43 by camillebarb       #+#    #+#             */
-/*   Updated: 2022/07/15 19:42:43 by camillebarb      ###   ########.fr       */
+/*   Updated: 2022/07/19 00:11:49 by camillebarb      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 /**
 *	@param str 
-		str is my argv1 (the file with the extension .cub)
+		str is my argv1 (the file with the extension x.cub)
 *	*The function counts the number of dots it encounters in the string
 *		!There cannot be more that one dot! If count != 1, then it is wrong
 **/
@@ -37,7 +37,7 @@ static int	count_dots(const char *str)
 
 /**
 *	@param str
-		str is my argv1 (the file with the extension .cub)
+		str is my argv1 (the file with the extension x.cub)
 *	*The function checks the validity of argv1
 		1) It checks that the len is higher than 4
 *			!It cannot be ".cub" (it is a hidden file)
@@ -64,7 +64,7 @@ int	check_validity_argv1(const char *str)
 	start = len - 4;
 	if (ft_strncmp(str + start, ".cub", 4) != 0)
 		return (ft_error("Invalid argument: Wrong extension!\n"), EXIT_FAILURE);
-	if (len < 5)
+	if (len < 5 || (str[len - 5] == '/'))
 		return (ft_error("Invalid argument: Your file is a hidden file!\n"), EXIT_FAILURE);		
 	return (EXIT_SUCCESS);
 }
@@ -85,5 +85,6 @@ int	file_exists(const char *str)
 		ft_error("Valid argument but the file could not be opened!\n");
 		return (-1);
 	}
+	close(fd);
 	return (EXIT_SUCCESS);
 }
