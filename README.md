@@ -1,6 +1,7 @@
-# 42Paris Project 10 -> Cub3D
 
-## *Ressources*
+<h1>42Paris Project 10 -> Cub3D</h1>
+
+<h2>*Ressources*</h2>
 
   [1] (https://harm-smits.github.io/42docs/projects/cub3d)
   [2] (https://guy-grave.developpez.com/tutoriels/jeux/doom-wolfenstein-raycasting/)
