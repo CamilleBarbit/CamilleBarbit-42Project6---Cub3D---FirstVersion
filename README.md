@@ -6,6 +6,9 @@
 <main>
 
 <h2><strong>Ressources</strong></h2>
+
+<p>The following links enable to better understand the principle of raycasting, which may seem vague at the beginning! As Cub3D is the first project in 3D, it is important to assimilate the notions properly.
+</p>
 <ul>
   <a href="https://guy-grave.developpez.com/tutoriels/jeux/doom-wolfenstein-raycasting/">Raycasting for Dummies</a>.
 
