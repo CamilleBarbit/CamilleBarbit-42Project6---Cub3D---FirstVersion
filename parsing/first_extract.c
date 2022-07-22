@@ -6,7 +6,7 @@
 /*   By: camillebarbit <camillebarbit@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/15 17:05:08 by camillebarb       #+#    #+#             */
-/*   Updated: 2022/07/21 14:04:59 by camillebarb      ###   ########.fr       */
+/*   Updated: 2022/07/22 12:21:06 by camillebarb      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -134,7 +134,7 @@ int	check_space_and_place(t_info *parsing)
 					while (line_is_empty(parsing->file_infos[i]))
 					{
 						i++;
-						if (i == (parsing->size - 1))
+						if (i == parsing->size - 1 && line_is_empty(parsing->file_infos[i]))
 							return (EXIT_SUCCESS);							
 					}
 					if (map_beginning(parsing->file_infos[i]) == 3)
@@ -147,12 +147,7 @@ int	check_space_and_place(t_info *parsing)
 						ft_error("Invalid map: The map description is not the last element of the file!\n");
 						return (EXIT_FAILURE);
 					}		
-				}
-				// else
-				// {
-				// 	ft_error("Invalid map: Something is wrong with the syntax!\n");					
-				// 	break;					
-				// }			
+				}		
 			}
 		}
 		i++;
