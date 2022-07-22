@@ -13,7 +13,7 @@
     <p>The following links enable to better understand the principle of raycasting, which may seem vague at the beginning! As Cub3D is the first project in 3D, it is important to assimilate the notions properly. You can read <a href="https://harm-smits.github.io/42docs/projects/cub3d">42 Docs</a> or have a look at the following articles:</p>
     <ul>
       <li><a href="https://guy-grave.developpez.com/tutoriels/jeux/doom-wolfenstein-raycasting/">Raycasting for Dummies</a>,</li>
-      <li><a href="https://en.wikipedia.org/wiki/Ray_casting">Understanding the Basics of Raycasting</a></li>
+      <li><a href="https://en.wikipedia.org/wiki/Ray_casting">Understanding the Basics of Raycasting</a>,</li>
     </ul>
   </section>
 
