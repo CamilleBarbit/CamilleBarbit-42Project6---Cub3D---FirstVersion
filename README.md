@@ -2,7 +2,7 @@
 <h1><strong>42Paris Project 10 -> Cub3D</strong></h1>
 
 <img
-  src="https://www.pexels.com/fr-fr/photo/cartouches-de-jeu-1373100/">
+  src="https://www.freepng.fr/png-cptqzi/" width="300pxm" style="border-radius:50%">
 <main>
 
 <h2><strong>Ressources</strong></h2>
