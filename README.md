@@ -21,7 +21,7 @@
     <h2><strong>How to Map Your Project?</strong></h2>
     <ol>
       <li>Map Parsing</li>
-      <li>Visualisation en raycasting</li>
+      <li>Visualisation and raycasting</li>
     </ol>
   </section>
 
