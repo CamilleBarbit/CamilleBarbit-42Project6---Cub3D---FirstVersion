@@ -6,9 +6,13 @@
 #    By: camillebarbit <camillebarbit@student.42    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/07/13 19:23:44 by camillebarb       #+#    #+#              #
-#    Updated: 2022/07/20 16:44:18 by camillebarb      ###   ########.fr        #
+#    Updated: 2022/07/22 11:15:46 by camillebarb      ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
+
+################################################################################
+
+################################ ARGUMENTS #####################################
 
 NAME = cub3D
 
@@ -18,16 +22,24 @@ RM = rm -rf
 
 CFLAGS = -g -Wall -Wextra -Werror
 
-C_FILES = cub3D.c \
-			errors_and_exit/error.c \
-			errors_and_exit/exit.c \
-			parsing/validity_argv1.c \
-			parsing/first_extract.c \
-			parsing/parsing_textures_and_colors.c \
-			utils.c
+################################################################################
+
+################################### SOURCES ####################################
+
+C_FILES = cub3D \
+			errors_and_exit/error \
+			errors_and_exit/exit \
+			parsing/validity_argv1 \
+			parsing/first_extract \
+			parsing/parsing_textures_and_colors \
+			utils
 
 
-O_FILES = ${C_FILES:.c=.o}
+O_FILES = $(addsuffix .o, $(C_FILES))
+
+################################################################################
+
+################################### RULES ######################################
 
 all: ${NAME}
 
