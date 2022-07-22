@@ -1,18 +1,14 @@
 
 <h1><strong>42Paris Project 10 -> Cub3D</strong></h1>
 
-<img
-  src="https://www.freepng.fr/png-cptqzi/" width="300pxm" style="border-radius:50%">
+
 <main>
 
 <h2><strong>Ressources</strong></h2>
 
-  <p>Raycasting for Dummies: <a
-  href="https://guy-grave.developpez.com/tutoriels/jeux/doom-wolfenstein-raycasting/">link</a>.
-  </p>
-  <p>42 Docs: <a
-  href="https://harm-smits.github.io/42docs/projects/cub3d">link</a>.
-  </p>
+  <a href="https://guy-grave.developpez.com/tutoriels/jeux/doom-wolfenstein-raycasting/">Raycasting for Dummies</a>.
+
+  <a href="https://harm-smits.github.io/42docs/projects/cub3d">42 Docs</a>.
 
 <h2><strong>Functions Allowed</strong></h2>
 <ul>
