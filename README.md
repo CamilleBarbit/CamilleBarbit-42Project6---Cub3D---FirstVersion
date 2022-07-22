@@ -1,7 +1,7 @@
 <hmtl>
   <h1><strong>42Paris Project 10 -> Cub3D</strong></h1>
 
-  <img src= "https://img.itch.zone/aW1hZ2UvMjk3MTU4LzE0NTE2NzcucG5n/original/3BKF2z.png" alt ="Wolfenstein 3D is the ancestor of games such as Doom (Id Software, 1993), Doom II (Id Software, 1994), Duke Nukem 3D (3D Realm, 1996) and Quake (Id Software, 1996), which are additional cornerstones in the world of video games."
+  <img src= "https://img.itch.zone/aW1hZ2UvMjk3MTU4LzE0NTE2NzcucG5n/original/3BKF2z.png" alt ="Wolfenstein 3D is the ancestor of games such as Doom (Id Software, 1993), Doom II (Id Software, 1994), Duke Nukem 3D (3D Realm, 1996) and Quake (Id Software, 1996), which are additional cornerstones in the world of video games.">
 
 <main>
   <section>
