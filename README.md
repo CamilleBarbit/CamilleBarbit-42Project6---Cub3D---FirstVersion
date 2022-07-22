@@ -18,6 +18,13 @@
   </section>
 
   <section>
+    <h2><strong>How to Map Your Project?</strong></h2>
+    <ol>
+      <li>Map Parsing</li>
+      <li>Visualisation en raycasting</li>
+    </ol>
+
+<section>
     <h2><strong>Functions Allowed</strong></h2>
     <ul>
       <li>open()</li>
@@ -32,13 +39,5 @@
       <li>exit()</li>
    </ul>
   </section>
-
-  <section>
-    <h2><strong>How to Map Your Project?</strong></h2>
-    <ol>
-      <li>Map Parsing</li>
-      <li>Visualisation en raycasting</li>
-    </ol>
-  <h2>
 </main>
 </html>
