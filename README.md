@@ -25,7 +25,7 @@
     </ol>
   </section>
 
-  <section>
+  <!-- <section>
     <h2><strong>Functions Allowed</strong></h2>
     <ul>
       <li>open()</li>
@@ -39,7 +39,7 @@
       <li>sterror()</li>
       <li>exit()</li>
    </ul>
-  </section>
+  </section> -->
 
 </main>
 </html>
