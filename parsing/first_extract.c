@@ -6,7 +6,7 @@
 /*   By: camillebarbit <camillebarbit@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/15 17:05:08 by camillebarb       #+#    #+#             */
-/*   Updated: 2022/07/22 12:21:06 by camillebarb      ###   ########.fr       */
+/*   Updated: 2022/07/23 20:49:58 by camillebarb      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,7 @@ static int	map_beginning(const char *str)
  *	*This function will calculate the total number of lines (empty lines included) in the file x.cub
  **/
 
-static void	map_size(t_info *parsing, const char *str)
+static int	map_size(t_info *parsing, const char *str)
 {
 	int		fd;
 	char	*line;
@@ -51,7 +51,7 @@ static void	map_size(t_info *parsing, const char *str)
 	if (fd < 0)
 	{
 		ft_error("The file could not be opened!\n");
-		return ;
+		return (1);
 	}
 	parsing->size = 0;
 	line = get_next_line(fd);
@@ -62,6 +62,12 @@ static void	map_size(t_info *parsing, const char *str)
 		line = get_next_line(fd);
 	}
 	free(line);
+	if (parsing->size < 6)
+	{
+		ft_error("There are not enough lines in the file!\n");
+		return (1);	
+	}
+	return (0);
 }
 
 /**
@@ -72,33 +78,52 @@ static void	map_size(t_info *parsing, const char *str)
 *	*This function will malloc in a char **parsing->file_infos containing everything that is in the file
  **/
 
-void	ft_extract_infos(t_info *parsing, const char *str)
+int	ft_extract_infos(t_info *parsing, const char *str)
 {
 	int	fd;
 	int	nb_lines;
 	int	i;
+	int	empty;
 
 	fd = open(str, O_RDONLY);
 	if (fd < 0)
 	{
 		ft_error("The file could not be opened!\n");
-		return ;
+		return (1);
 	}
-	map_size(parsing, str);
+	if (map_size(parsing, str) == 1)
+		return (1);
 	nb_lines = parsing->size;
 	i = 0;
 	parsing->file_infos = malloc(sizeof(char *) * (nb_lines + 1));
 	if (!parsing->file_infos)
-		return ;
+		return (1);
 	while (nb_lines > 0)
 	{
 		parsing->file_infos[i] = get_next_line(fd);
 		i++;
 		nb_lines--;
 	}
-	parsing->file_infos[i] = 0;
+	parsing->file_infos[i] = '\0';
+	nb_lines = parsing->size;
+	i = 0;
+	while (i < nb_lines)
+	{
+		if (!line_is_empty(parsing->file_infos[i]))
+		{
+			empty = 1;
+			break;
+		}
+		empty = 0;
+		i++;
+	}
 	close(fd);
-	//print_tab(parsing);
+	if (empty == 0)
+	{
+		ft_error("The file is empty!\n");
+		return (1);
+	}
+	return (0);
 }
 
 /**

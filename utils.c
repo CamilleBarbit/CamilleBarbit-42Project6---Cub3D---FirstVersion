@@ -6,7 +6,7 @@
 /*   By: camillebarbit <camillebarbit@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/18 15:36:11 by camillebarb       #+#    #+#             */
-/*   Updated: 2022/07/21 13:44:35 by camillebarb      ###   ########.fr       */
+/*   Updated: 2022/07/23 21:02:26 by camillebarb      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -78,6 +78,7 @@ int	str_compare(const char *s1, const char *s2)
 	// }
 	while (s1[i] && s2[i] && s1[i] == s2[i])
 		i++;
+	printf("RETURN STR_COMPARE: %d\n", (s1[i] - s2[i]));
 	return (s1[i] - s2[i]);
 }
 

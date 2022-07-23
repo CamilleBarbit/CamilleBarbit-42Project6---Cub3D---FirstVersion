@@ -6,7 +6,7 @@
 /*   By: camillebarbit <camillebarbit@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/19 18:21:46 by camillebarb       #+#    #+#             */
-/*   Updated: 2022/07/21 13:59:22 by camillebarb      ###   ########.fr       */
+/*   Updated: 2022/07/23 20:59:27 by camillebarb      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -83,6 +83,7 @@ static int	compare_lines_and_identifiers(t_info *parsing)
 	i = 0;
 	while (i < 6)
 	{
+	//	printf("STRING: %s\n", parsing->identifiers[i]);
 		if (str_compare(parsing->identifiers[i], parsing->line) == 0)
 		{
 			parsing->tab[i] = 1;
@@ -90,6 +91,7 @@ static int	compare_lines_and_identifiers(t_info *parsing)
 		}
 		i++;
 	}
+	//print_tab(parsing);
 	ft_error("Invalid texture or color description: Something is wrong with the syntax or just missing!\n");
 	return (EXIT_FAILURE);	
 }
@@ -107,6 +109,7 @@ int	check_texture_and_color(t_info *parsing)
 {
 	int i;
 	int nb_lines;
+	int	wrong;
 
 	i = 0;
 	nb_lines = 6; //nb_lines corresponds to the total number of lines (texture + color descriptions)
@@ -126,15 +129,17 @@ int	check_texture_and_color(t_info *parsing)
 		i++;
 	}
 	i = 0;
+	wrong = 0;
 	while (i < 6)
 	{
 		if (parsing->tab[i] == 0)
 		{
-			printf("There is something missing in the description : %s", parsing->identifiers[i]);
-			return (EXIT_FAILURE);	
+			wrong = 1;
+			printf("There is something missing in the description : %s\n", parsing->identifiers[i]);
 		}
-		
 		i++;
 	}
+	if (wrong == 1)
+		return (EXIT_FAILURE);
 	return (EXIT_SUCCESS);
 }
